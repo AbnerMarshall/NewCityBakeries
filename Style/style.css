@@ -1,0 +1,243 @@
+body {
+    height:99vh;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+    padding: 10px;
+    margin:auto;
+    height:99%;
+    grid-gap:10px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.title{
+    font-size:40px;
+    font-family: 'Dancing Script', cursive;
+    margin:30px 0px 30px 0px;
+}
+
+th {
+    text-align: left;
+}
+
+#gridItem1, #gridItem2, #gridItem3, #gridItem4, #gridItem5
+ {
+    grid-gap:10px;
+    border-radius: 10px;
+}
+
+#gridItem2 {
+    grid-row: 1;
+    grid-column: 2/ span 2;
+    background-color: #f4cfdf;
+
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: 40%;
+    background-size: cover;
+    background-size: 40%;
+}
+
+#gridItem1 {
+    grid-row: 1/ span 5;
+    grid-column: 1;
+    background-color: #5784ba;
+    background-image: url('../images/ellieelien-Rejlvd47WjI-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#redBox{
+display: flex;
+    opacity:0;
+    /* width: content-box; // Validation Says this isnt needed */
+    height:1303px;
+    position: relative;
+    background-color: rgba(154, 200, 235, .6);
+    backdrop-filter: blur(5px);
+    top:-0px;
+    transition: top 0s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#redBox2{
+    display: flex;
+    opacity:1;
+    /* height: content-box; // Validation says this is not needed */
+    width :829px;
+    position: relative;
+    background-color: rgba(247, 246, 207,.6);
+    backdrop-filter: blur(5px);
+    right:-829px;
+    transition: right 1.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center{
+    text-align: center;
+}
+
+#gridItem3 {
+    grid-row: 2/ span 2;
+    grid-column:2;
+    background-color: #f7f6cf;
+    background-image: url('../images/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#gridItem4 {
+    grid-row: 2/ span 4;
+    grid-column:3;
+    background-color: #b6d8f2;
+    background-image: url('../images/cake.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+}
+
+#gridItem5 {
+    grid-row: 4/ span 2;
+    grid-column:2;
+    background-color: #9ac8eb;
+    background-image: url('../images/deva-williamson-ntfGWVbBiO0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.textBox{
+    margin: auto;
+    width:80%;
+    height:80%;
+    border-style: solid;
+    border-color: red;
+}
+
+#infoBox1, #infoBox2 {
+    display: flex;
+    margin: auto;
+    width:80%;
+    height:40%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    padding: 15px;
+}
+
+#infoBox2{
+    color:#5784ba;
+    flex-direction: column;
+    font-weight: bolder;
+    text-align: left;
+}
+
+
+input[type=text], input[type=tel], input[type=number], input[type=email], select, input[type=checkbox] {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding:2px;
+    margin:2px 0 2px 0;
+}
+
+td img, img {
+    padding-top:10px;
+    width:60px;
+    color:white;
+}
+
+#round, #square{
+    display:none;
+}
+#round+img, #square+img{
+    cursor:pointer;
+    border:2px solid transparent;
+
+}
+#round:checked+img, #square:checked+img{
+    border:2px solid #f00;
+    border-radius:10px;
+    background-color:#f4cfdf;
+    border-width: 5px;
+}
+
+input[type='checkbox'] {
+    appearance:none;
+    width:20px;
+    height:20px;
+    background:white;
+    border-radius:5px;
+    border:none;
+}
+
+input[type='checkbox']:checked {
+    background: #f4cfdf;
+}
+
+#sheetCake{
+display:none;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+#roundCake{
+display:none;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    color:white;
+    background-color: #5784ba;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+}
+
+input[type=submit]:hover{
+    background-color: #9ac8eb;
+}
+
+#roundCake img, #sheetCake img {
+    width: 100px;
+    margin: auto;
+}
+
+#headertext {
+    float: right;
+    padding: 130px 10px 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+
+
+}
+
+
