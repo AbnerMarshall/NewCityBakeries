@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewCityBakeries</title>
+
+
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:ital,wght@0,400;0,800;1,500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+    <script src="Jscript/result.js"></script>
+
+</head>
+<body>
+
+
+<div class="grid-container">
+    <div id="gridItem1">
+        <div id="redBox">
+            <div id="infoBox1">
+
+                <FORM id="myForm1" onsubmit="buttonandchecks(); return false;">
+                    <div class="title">Customer Information</div>
+
+                    <table>
+                        <tr>
+                            <td><label for="fname">First Name:</label></td>
+                            <td><input type="text" id="fname" name="fname" title="first name" pattern="[A-Za-z-]{2,25}"
+                                       maxlength="30" size="30" required autofocus></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lname">Last Name:</label></td>
+                            <td><input type="text" id="lname" name="lname" title="last name" pattern="[A-Za-z-]{3,25}"
+                                       maxlength="30" size="30" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="address">Address:</label></td>
+                            <td><input type="text" id="address" name="address" maxlength="30" size="30"
+                                       required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pcode">Postal Code:</label></td>
+                            <td><input type="text" id="pcode" name="pcode" title="postal code"
+                                       pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]"
+                                       maxlength="7" size="10" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="tel">Phone #:</label></td>
+                            <td><input type="tel" id="tel" name="tel" title="phone number"
+                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                       maxlength="15" size="20" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="email">E-mail:</label></td>
+                            <td><input type="email" id="email" name="email" title="email address"
+                                       pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" maxlength="30"
+                                       size="30" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><div class="title">Cake Type</div></td>
+                        </tr>
+                        <tr>
+
+                            <td><label for="square">Sheet Cake<br>
+                                <input type="radio" id="square" name="caketype" value="Sheet cake" required/>
+
+                                <img src="icons/square.png" alt="sheetcake icon">
+                            </label></td>
+
+                            <td><label for="round">Round Cake<br>
+                                <input type="radio" id="round" name="caketype" value="Round cake" required/>
+
+                                <img src="icons/round.png" alt="roundcake icon">
+                            </label></td>
+                        </tr>
+
+                    </table>
+                    <br>
+                    <input type="submit" value="Make Cake">
+                </form>
+
+            </div>
+
+
+            <div id="sheetCake">
+                <img src="icons/square.png" alt="sheetcake icon">
+                <FORM id="myForm2" onsubmit="buttonandchecks2(); return false;">
+                    <h1 class="center">Sheet Cake</h1>
+
+                    <table>
+
+                        <tr>
+                            <th><div class="title">Dimensions</div></th>
+                        </tr>
+                        <tr>
+
+                            <td><label for="length">Length:</label></td>
+                            <td><input type="number" id="length" name="length" min="30" max="60" value="30" required>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td><label for="width">Width:</label></td>
+                            <td><input type="number" id="width" name="width" min="30" max="45" value="30" required></td>
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="slevel">Level:</label></td>
+                            <td><input type="number" id="slevel" name="slevel" min="1" max="3" value="1" required></td>
+                        </tr>
+                        <tr>
+                            <th><div class="title">Additional Choices</div></th>
+                        </tr>
+                        <tr>
+
+                            <td><label for="screamCheese">Cream cheese icing ($5):</label></td>
+                            <td><input type="checkbox" id="screamCheese" name="screamCheese" value="5"></td>
+                        </tr>
+                        <tr>
+
+                            <td><label for="sfruitAndAlmonds">Fruit and Almonds ($7):</label></td>
+                            <td><input type="checkbox" id="sfruitAndAlmonds" name="sfruitAndAlmonds" value="7"></td>
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="sfruitJam">Fruit jam filling ($4):</label></td>
+                            <td><input type="checkbox" id="sfruitJam" name="sfruitJam" value="4"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Place Order">
+
+                </form>
+            </div>
+
+            <div id="roundCake">
+                <img src="icons/round.png" alt="roundcake icon">
+                <FORM id="myForm3" onsubmit="buttonandchecks2(); return false;">
+                    <h1 class="center">Round Cake</h1>
+
+                    <table>
+
+                        <tr>
+                            <th><div class="title">Dimensions</div></th>
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="radius">Radius:</label></td>
+                            <td><input type="number" id="radius" name="radius" min="15" max="30" value="15" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="rlevel">Level:</label></td>
+                            <td><input type="number" id="rlevel" name="rlevel" min="1" max="3" value="1" required></td>
+                        </tr>
+                        <tr>
+                            <th><div class="title">Additional Choices</div></th>
+                        </tr>
+                        <tr>
+
+                            <td><label for="rcreamCheese">Cream cheese icing ($5):</label></td>
+                            <td><input type="checkbox" id="rcreamCheese" name="rcreamCheese" value="5"></td>
+                        </tr>
+                        <tr>
+
+                            <td><label for="rfruitAndAlmonds">Fruit and Almonds ($7):</label></td>
+                            <td><input type="checkbox" id="rfruitAndAlmonds" name="rfruitAndAlmonds" value="7"></td>
+                        </tr>
+
+                        <tr>
+
+                            <td><label for="rfruitJam">Fruit jam filling ($4):</label></td>
+                            <td><input type="checkbox" id="rfruitJam" name="rfruitJam" value="4"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Place Order">
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <header id="gridItem2">
+        <div id = "headertext">Contact : 555-5555</div></header>
+    <div id="gridItem3">
+
+    </div>
+    <div id="gridItem4">
+        <div id="redBox2">
+            <div id="infoBox2"></div>
+        </div>
+    </div>
+    <div id="gridItem5"></div>
+
+
+</div>
+
+</body>
+</html>
